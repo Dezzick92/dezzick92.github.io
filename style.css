@@ -30,12 +30,6 @@ main {
     padding: 2em;
 }
 
-img.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto }
-}
-
 @media screen and (orientation:portrait){
     img.card {
         width: 90%;
@@ -51,6 +45,11 @@ img.displayed {
     img.displayed{
         width: auto;
     }
+}
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 }
 
 
