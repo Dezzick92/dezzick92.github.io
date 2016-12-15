@@ -3,6 +3,10 @@ Base Colour reference chart
 
 Red (Links)                     #E14658
 Dark Red (Button Background)    #B33846
+
+Green (Links)                   #A4E146
+Dark Green (Button Background)  #83B338
+
 Black                           #22252C
 Bone                            #C0B3A0
 Light Bone (Code Background)    #F2E8DA
@@ -43,12 +47,12 @@ pre {
 
 }
 a {
-    color:#E14658;
+    color:#A4E146;
 }
 
 header {
     max-width: none;
-    background-color :#E14658;
+    background-color :#A4E146;
     background-image: url("header.JPG");
     background-position: center top;
     background-size: cover;
@@ -79,5 +83,5 @@ header a {
 }
 
 header a:hover {
-    background: #B33846
+    background: #83B338
 }
