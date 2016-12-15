@@ -33,7 +33,7 @@ main {
         width: 33%
     }
 }
-@media screen and orientation(:portrait){
+@media screen and (orientation:portrait){
     .card {
         width: 90%;
     }
