@@ -38,7 +38,7 @@ img.displayed {
 }
 
 
-@media only screen and (max-width: 1023px){
+@media only screen and (max-width: 1179px){
     img.card {
         width: 90%;
     }
@@ -47,7 +47,7 @@ img.displayed {
     }
 }
 
-@media only screen and (min-width: 1024px){
+@media only screen and (min-width: 1280px){
     img.card {
         width: 33%;
     }
