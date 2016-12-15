@@ -33,17 +33,17 @@ main {
 img.card {
     margin: 0 auto;
 }
-
+@media screen and (orientation:landscape) {
+    img.card {
+        width: 33%;
+    }
+}
 @media screen and (orientation:portrait) {
     img.card {
         width: 90%;
     }
 }
-@media screen and (orientation:landscape) {
-    img.card {
-        width: 10%;
-    }
-}
+
 
 h1,h2,h3 {
     line-height: 1.2;
