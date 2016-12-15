@@ -28,6 +28,10 @@ main {
     padding: 2em;
 }
 
+.card {
+    margin: auto
+}
+
 @media screen and (min-width:1024px){
     .card {
         width: 33%
