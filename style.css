@@ -37,25 +37,17 @@ img.displayed {
     width: auto;
 }
 
-@media only screen and (min-width: 480px){
+
+@media only screen and (max-width: 1023px){
     img.card {
         width: 90%;
     }
     img.displayed{
-        width: auto;
+        width: 90%;
     }
 }
 
-@media only screen and (min-width: 960px){
-    img.card {
-        width: 45%;
-    }
-    img.displayed{
-        width: auto;
-    }
-}
-
-@media only screen and (min-width: 1440px){
+@media only screen and (min-width: 1024px){
     img.card {
         width: 33%;
     }
