@@ -38,6 +38,16 @@ main {
         width: 90%;
     }
 }
+@media screen and (orientation:landscape) and (max-width:1023px){
+    .card {
+        width: 50%;
+    }
+}
+@media screen and (orientation:landscape) and (min-width:1024px){
+    .card {
+        width: 33%;
+    }
+}
 
 h1,h2,h3 {
     line-height: 1.2;
