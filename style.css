@@ -29,11 +29,12 @@ main {
 }
 
 @media (min-width:500px){
-    img {
+    .card {
+        width: 33%
     }
 }
 @media (max-width:499px){
-    img {
+    .card {
         width: 90%;
     }
 }
