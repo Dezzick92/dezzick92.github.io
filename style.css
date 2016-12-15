@@ -37,8 +37,18 @@ img.displayed {
 }
 
 img.card {
-    width:33%
+     width:33%
+ }
+
+@media only screen and (orientation:landscape){
+    img.card {
+        width: 33%;
+    }
+    img.displayed{
+        width: auto;
+    }
 }
+
 
 @media only screen and (orientation:portrait){
     img.card {
