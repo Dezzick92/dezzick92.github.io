@@ -41,7 +41,7 @@ img.card {
 }
 @media screen and (orientation:landscape) {
     img.card {
-        width: 33%;
+        width: 30%;
     }
 }
 
