@@ -40,19 +40,13 @@ img.card {
     width:33%
 }
 
-@media only screen and (orientation:landscape){
-    img.card {
-        width: 33%;
-    }
-    img.displayed{
-        width: auto;
-    }
-}
-
-
 @media only screen and (orientation:portrait){
     img.card {
         width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto 
+        
     }
     img.displayed {
         width: 90%;
