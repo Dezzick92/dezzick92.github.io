@@ -28,12 +28,12 @@ main {
     padding: 2em;
 }
 
-@media screen {
+@media screen and (min-width:1024px){
     .card {
         width: 33%
     }
 }
-@media (orientation:portrait){
+@media screen and orientation(:portrait){
     .card {
         width: 90%;
     }
