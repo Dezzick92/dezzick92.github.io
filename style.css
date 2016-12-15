@@ -28,12 +28,12 @@ main {
     padding: 2em;
 }
 
-@media screen and (min-width:500px){
+@media screen {
     .card {
         width: 33%
     }
 }
-@media screen and landscape{
+@media screen and (orientation:portrait){
     .card {
         width: 90%;
     }
