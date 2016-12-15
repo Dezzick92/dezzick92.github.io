@@ -34,16 +34,10 @@ main {
     img.card {
         width: 90%;
     }
-    img.displayed {
-        width: 90%;
-    }
 }
 @media screen and (orientation:landscape){
     img.card {
         width: 33%;
-    }
-    img.displayed{
-        width: auto;
     }
 }
 img.displayed {
