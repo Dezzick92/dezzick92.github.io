@@ -28,27 +28,25 @@ main {
     padding: 2em;
 }
 
-.card {
-    margin: auto
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 }
 
-@media screen and (min-width:1024px){
-    .card {
-        width: 33%
-    }
+img.card {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
 }
+
 @media screen and (orientation:portrait){
-    .card {
+    img.card {
         width: 90%;
     }
 }
-@media screen and (orientation:landscape) and (max-width:1023px){
-    .card {
-        width: 50%;
-    }
-}
-@media screen and (orientation:landscape) and (min-width:1024px){
-    .card {
+@media screen and (orientation:landscape){
+    img.card {
         width: 33%;
     }
 }
