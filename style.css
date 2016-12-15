@@ -48,8 +48,8 @@ img.displayed {
     img.card {
         width: 33%;
     }
-    img.card {
-        width: 50%;
+    img.displayed{
+        width: auto;
     }
 }
 
