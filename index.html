@@ -2,130 +2,99 @@
 <html>
     
     <head>
-        <title>Forest OP nerf pls</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
         <link rel="stylesheet" href="style.css">
+        
+        <title>Sleep OP nerf pls</title>
+        
+        
+            <!-- Equation Rendering -->
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+            <!-- Chart Rendering -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+
     </head>
     
     <body>
-        <header>
-        <h1>Mono Green Stompy - Primer &amp; Deck Tech</h1>
-        </header>
-        <main>
-        <p>
-            Mono Green Stompy is philosophically a very simple deck. Play undercosted, hard to remove creatures and attempt go under their game plan. The deck features a surprising amount of maindeck interaction against most decks, and punches higher than the budget suggests. While we are playing an aggro deck, there are a lot of cards that can provide value up to and during the late stages of a game. 
-        </p>
-        <p>
-            Stompy is an excellent starting point in Modern for two primary reasons. The first is that Stompy is a cheap deck, and none of the core cards are truly expensive. While it doesn't segue into a tier one deck, it plays better than impressions of tier decks made with the same budget. Secondly, it is easy to pick up but definitely has a lot of depth to learn and master.
-        </p>
+        <article>
+            <h1>Using Graphs and Equations</h1>
+            <p class="subtitle">Adding JS bloat 101</p>
+            <section>
+                    <p>
+                        I need to update some things. Don't forget to change the fallback fonts to something sans-serif.
+                    </p>
+                    <p>
+                        I'm using <a href="https://www.chartjs.org">Chart.js</a> for graphs and <a href="https://www.mathjax.org">MathJax</a> for equations.
+                    </p>
+                    <p> 
+                        When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+                    </p>
+                    <p>
+                        An absurdly anal analysis about attack covering: weapon cost, time to level, and other dumb shit. This started off as an attempt to identify gaps (such as at 50 attack and at 65 attack) Fuck quests Pure analysis of DPS vs GE cost over each case
+                    </p>
+            </section>
             
-        <p>
-           There is an active thread on the MTGSalvation forums found <a href="http://www.mtgsalvation.com/forums/the-game/modern/developing-competitive-modern/556919-stompy"> here</a>. There are 195 pages of discussion at the time of writing, which the following tech is based upon. This is an attempt to provide the information spread through that thread in a single coherent piece. The original Modern deck was created by one Hans Christian Ljungquist, who posts as <a href="http://www.mtgsalvation.com/members/181344-user_369654">user_369654</a>, and the current custodian of the thread is the user <a href="http://www.mtgsalvation.com/members/129038-destroyermaker">destroyermaker</a>. My thanks to them both for their work in developing the deck and the primer.
-        </p>
-        <h1>Deck Tech</h1>
-        <h2>Mainboard</h2>
-        <p>
-            This example decklist is taken from the MTGSalvation primer. There are different options in building the mainboard, but this list is a solid starting place. There have been successes with more aggressive versions in recent opens - these lists will be discussed further on. Most of the variation comes from the sideboard, depending on the expected meta. A verbose list isn't given, but options will be given.
-        </p>
-            <h4>Lands: 22</h4>
-            <ul>
-                <li>17 Forest</li>
-                <li>2 Horizon Canopy</li>
-                <li>3 Treetop Village</li>
-            </ul>
-            <h4>Creatures: 24</h4>
-            <ul>
-                <li>4 Dryad Militant</li>
-                <li>4 Experiment One</li>
-                <li>4 Kalonian Tusker</li>
-                <li>4 Leatherback Baloth</li>
-                <li>4 Strangleroot Geist</li>
-                <li>4 Avatar of the Resolute</li>
-            </ul>
-            <h4>Other spells: 13</h4>
-            <ul>
-                <li>3 Aspect of Hydra</li>
-                <li>3 Dismember</li>
-                <li>4 Rancor</li>
-                <li>4 Vines of Vastwood</li>
-            </ul>
+            <section>
+                <h2>Combat Equations</h2>
+                <h3>Maximum Base Hit</h3>
+                
+                <p>
+                    \[Hit_{max} = 0.5 + \frac{A*(B+64)}{640}\]
+                    \[ A = \lfloor Strength * Prayer\: Bonus \rfloor + Stance\: Bonus + 8 \]
+                </p>
+            </section>
+                
+            <section>
+                <p>This is where I attempt to introduce a graph</p>
+                <figure>
+                    <label for="mn-chart" class="margin-toggle">&#8853;</label>
+                    <input type="checkbox" id="mn-chart" class="margin-toggle"/>
+                    <span class="marginnote">My First Chart</span>
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        //Chart.defaults.global.defaultFontFamily = "'"Roboto"'";
+                        var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'line',
+                            
+                            // The data for our dataset
+                            data: {
+                                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',],
+                                datasets: [{
+                                    label: 'My First dataset',
+                                    backgroundColor: 'rgb(255,99,132)',
+                                    borderColor: 'rgb(255,99,132)',
+                                    data: [0, 10, 5, 2, 20, 30, 45]
+                                }]
+                            },
+                            
+                            // Configuration options go here
+                            
+                            options: {
+                                animation: {
+                                    duration: 0,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'My First Chart',
+                                    //fontFamily: 'Roboto',
+                                    //fontSize: 16
+                                },
+                            }
+                        })
+                    </script>
+                    <footer>My First Chart</footer>
+                </figure>
+            </section>
+            
 
-            
-        <h2>Lands</h2>
-            
-        <h3>Forest</h3>
-            
-        <p>
-        <!--<img class="inline" src="images/Forest.jpg"/>-->
-            We run anything between 20 to 22 lands inclusive, most of which will be your common or garden forest. Some people consider it best if they all match.
-        </p>
-        <img class="card" src="images/Forest.jpg"/>
-            
-        <h3>Treetop Village</h3>
-            
-        <p>
-            Treetop village provides a use for excess mana in the face of flood, removal, and board wipes. It can avoid most of the latter threats, and provides an extra body when required. Having trample adds much needed reach when combined with pump spells, and often tips the edge of a board stall. Seeing more than one in a hand is rarely a Good Thing, as is one being your sole land. For these reasons, we run two to three copies. 
-        </p>
-        <img class="card" src="images/Treetop.jpg"/>
-            
-        <h3>Horizon Canopy</h3>
-            
-        <p>
-            Horizon Canopy is a very optional card, often costing as much as the rest of the deck. It provides some much needed card draw, and paying one life for a green mana isn't too much of a drawback - by the time it is, the sacrifice ability should be relevant. If you want to spend money on copies of this card, running more than two would possibly make for painful opening turns and isn't recommended.
-        </p>
-        <img class="card" src="images/Horizon.jpg"/>
-            
-        <h2>One CMC Creatures</h2>
-            
-        <h3>Experiment One</h3>
-        <p>
-            This little guy is the key card in an explosive start, often becoming a 2/2 or 3/3 for one mana. The regeneration ability allows it to survive removal or act as an emergency chump blocker. The best option for one mana creatures in this deck.
-        </p>
-        <img class="card" src="images/ExOne.jpg" />
-            
-        <h3>Dryad Militant</h3>
-        <p>
-            While this card may not be as survivable as a Young Wolf, the second point of power allows it to pump our Experiment Ones and it has a relevant ability.
-        </p>
-        <img class="card" src="images/DryadMilitant.jpg" />
-            
-        <h2> Alternative Choices</h2>
-            
-        <h3>Young Wolf</h3>
-        <p>
-            While a 1/1 for one mana is usually sub-par, undying provides excellent value against damage based removal and plenty of combat versatility. Undying triggers evolve on your Experiment Ones, although it <a href="http://mtgdocs.info/cr/704.7.">unfortunately doesn't protect against -1/-1 counters.</a>
-        </p>
-        <img class="card" src="images/YoungWolf.jpg" />
-            
-        <h3>Kessig Prowler</h3>
-        <p>
-            A more aggressive deck may want to run twelve or even sixteen one drops. Kessig prowler is one option in those builds, probably being the fourth-best creature in that spot. Lacking the survivability of Young Wolf or the shenanigans of Dryad, it has the ability to flip into a 4/4. However, that ability seems unlikely to be relevant often, so cutting any of the above cards to run this one wouldn't be a great idea.
-        </p>
-        <img class="card" src="images/KessigProwler.jpg"/>
-            
-        <h3>Nettle Sentinel</h3>
-        <p>
-            There appears to be a recent debate about whether this card has a place in the deck. The consensus is leaning towards no, as it wouldn't be a consistent enough attacker to warrant inclusion. There are posters who are insistent that Nettle Sentinel has been tried in the past and found not to work, and I am inclined to agree with them.
-        </p>
-        <img class="card" src="images/NettleSentinel.jpg"/>
-            
-        <h2>Two CMC Creatures</h2>
-            
-        <img class="card" src="images/Avatar.jpg" />
-        <img class="card" src="images/StrangleRootGeist.jpg" />
-        <img class="card" src="images/KalonianTusker.jpg"/>
-            
-        <h2>Alternative Choices</h2>
-        <img class="card" src="images/ScavOoze.jpg" />
-        <img class="card" src="images/GarruksComp.jpg" />
-        <img class="card" src="images/DryadSophisticate.jpg"/>
-        
-        <h2>Three CMC Creatures</h2>
-            
-        <h2>Alternative Choices</h2>
-            
-        <h2>Pump Spells</h2>
-            
-        <h2>Removal</h2>
+
+        </article>
             
     </body>
     
