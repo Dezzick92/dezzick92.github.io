@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Sleep OP nerf pls</title>
+        
+        
+            <!-- Equation Rendering -->
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+            <!-- Chart Rendering -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha512-s+xg36jbIujB2S2VKfpGmlC3T5V2TF3lY48DX7u2r9XzGzgPsa6wTpOQA7J9iffvdeBN0q9tKzRxVxw1JviZPg==" crossorigin="anonymous"></script>
+
+    </head>
+    
+    <body>
+        <article>
+            <h1>Using Graphs and Equations</h1>
+            <p class="subtitle">Adding JS bloat 101</p>
+            <section>
+                    <p>
+                        I need to update some things. Don't forget to change the fallback fonts to something sans-serif.
+                    </p>
+                    <p>
+                        I'm using <a href="https://www.chartjs.org">Chart.js</a> for graphs and <a href="https://www.mathjax.org">MathJax</a> for equations.
+                    </p>
+                    <p> 
+                        When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+                    </p>
+                    <p>
+                        An absurdly anal analysis about attack covering: weapon cost, time to level, and other dumb shit. This started off as an attempt to identify gaps (such as at 50 attack and at 65 attack) Fuck quests Pure analysis of DPS vs GE cost over each case
+                    </p>
+            </section>
+            
+            <section>
+                <h2>Combat Equations</h2>
+                <h3>Maximum Base Hit</h3>
+                
+                <p>
+                    \[Hit_{max} = 0.5 + \frac{A*(B+64)}{640}\]
+                    \[ A = \lfloor Strength * Prayer\: Bonus \rfloor + Stance\: Bonus + 8 \]
+                </p>
+            </section>
+                
+            <section>
+                <p>This is where I attempt to introduce a graph</p>
+                <figure>
+                    <label for="mn-chart" class="margin-toggle">&#8853;</label>
+                    <input type="checkbox" id="mn-chart" class="margin-toggle"/>
+                    <span class="marginnote">My First Chart</span>
+                    <canvas id="myChart"></canvas>
+                    <script>
+                        var ctx = document.getElementById('myChart').getContext('2d');
+                        //Chart.defaults.global.defaultFontFamily = "'"Roboto"'";
+                        var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'line',
+                            
+                            // The data for our dataset
+                            data: {
+                                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',],
+                                datasets: [{
+                                    label: 'My First dataset',
+                                    backgroundColor: 'rgb(255,99,132)',
+                                    borderColor: 'rgb(255,99,132)',
+                                    data: [0, 10, 5, 2, 20, 30, 45]
+                                }]
+                            },
+                            
+                            // Configuration options go here
+                            
+                            options: {
+                                animation: {
+                                    duration: 0,
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'My First Chart',
+                                    //fontFamily: 'Roboto',
+                                    //fontSize: 16
+                                },
+                            }
+                        })
+                    </script>
+                    <footer>My First Chart</footer>
+                </figure>
+            </section>
+            
+
+
+        </article>
+            
+    </body>
+    
+</html>
